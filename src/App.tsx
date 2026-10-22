@@ -1189,7 +1189,7 @@ function DirectYouTubeCassettePlayer({
       {/* Container Tersembunyi untuk YouTube IFrame Resmi (https://www.youtube.com/watch?v=wPb_miODtDI) */}
       <div
         aria-hidden="true"
-        className="pointer-events-none fixed -left-[9999px] -top-[9999px] h-px w-px overflow-hidden opacity-0"
+        className="pointer-events-none fixed -left-2499.75 -top-2499.75 h-px w-px overflow-hidden opacity-0"
       >
         <div id="yt-astaga-bercanda-player" />
       </div>
@@ -1248,7 +1248,7 @@ function DirectYouTubeCassettePlayer({
             </span>
             <span
               style={{ color: "#f4f1ea" }}
-              className="max-w-[115px] truncate text-[11px] font-bold group-hover:text-sky-300 transition-colors"
+              className="max-w-28.75 truncate text-[11px] font-bold group-hover:text-sky-300 transition-colors"
             >
               Astaga Bercanda
             </span>
@@ -1275,7 +1275,7 @@ function DirectYouTubeCassettePlayer({
             backgroundColor: "rgba(10, 15, 21, 0.96)",
             borderColor: "rgba(255, 255, 255, 0.16)",
           }}
-          className="w-[305px] sm:w-[340px] rounded-2xl border p-3.5 shadow-[0_24px_70px_rgba(0,0,0,0.9)] backdrop-blur-xl transition-all"
+          className="w-76.25 sm:w-85 rounded-2xl border p-3.5 shadow-[0_24px_70px_rgba(0,0,0,0.9)] backdrop-blur-xl transition-all"
         >
           <div className="flex items-center gap-3">
             <button
@@ -1476,7 +1476,7 @@ function EditorialIntro({
   if (phase === "done") return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden">
+    <div className="fixed inset-0 z-100 flex items-center justify-center overflow-hidden">
       <div
         className={`absolute top-0 left-0 right-0 h-1/2 bg-[#070a0d] border-b border-white/10 transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] ${
           phase === "opening" ? "-translate-y-full" : "translate-y-0"
@@ -1484,7 +1484,7 @@ function EditorialIntro({
       >
         <div className="absolute inset-0 flex items-center justify-between px-8 opacity-10 select-none pointer-events-none overflow-hidden">
           <span className="font-mono text-xs tracking-[0.5em] text-slate-400">
-            ISSUE NO. 01 // CIREBON — TOKYO
+            ISSUE NO. 01 // CIREBON
           </span>
           <span
             lang="ja"
@@ -1542,7 +1542,7 @@ function EditorialIntro({
               {String(progress).padStart(3, "0")}%
             </span>
           </div>
-          <div className="h-[2px] w-full bg-white/10 overflow-hidden">
+          <div className="h-0.5 w-full bg-white/10 overflow-hidden">
             <div
               style={{ width: `${progress}%` }}
               className="h-full bg-sky-400 transition-all duration-75"
@@ -1681,17 +1681,17 @@ function JapaneseEditorialBackground(): React.ReactElement {
         style={{
           transform: `translate3d(0px, ${(-smoothY * 0.2).toFixed(1)}px, 0px)`,
         }}
-        className="absolute inset-x-0 top-0 h-[4600px]"
+        className="absolute inset-x-0 top-0 h-1150"
       >
         <div
           style={{ transform: `translateX(${driftSlow.toFixed(1)}px)` }}
-          className="absolute top-[85px] left-[4%] font-serif text-[110px] sm:text-[190px] lg:text-[230px] font-black text-white/[0.024] leading-none"
+          className="absolute top-21.25 left-[4%] font-serif text-[110px] sm:text-[190px] lg:text-[230px] font-black text-white/[0.024] leading-none"
         >
           創造性
         </div>
         <div
           style={{ transform: `translateX(${(-driftMid).toFixed(1)}px)` }}
-          className="absolute top-[520px] right-[5%] text-right"
+          className="absolute top-130 right-[5%] text-right"
         >
           <span className="block font-mono text-[10px] tracking-[0.45em] text-sky-400/20">
             STRUCTURAL HARMONY // 構造美
@@ -1703,7 +1703,7 @@ function JapaneseEditorialBackground(): React.ReactElement {
 
         <div
           style={{ transform: `translateX(${driftMid.toFixed(1)}px)` }}
-          className="absolute top-[1150px] left-[7%]"
+          className="absolute top-287.5 left-[7%]"
         >
           <span className="block font-mono text-[10px] tracking-[0.4em] text-white/15">
             CRAFT & ENGINEERING // 技術領域
@@ -1715,7 +1715,7 @@ function JapaneseEditorialBackground(): React.ReactElement {
 
         <div
           style={{ transform: `translateX(${(-driftSlow).toFixed(1)}px)` }}
-          className="absolute top-[1960px] right-[6%] text-right"
+          className="absolute top-490 right-[6%] text-right"
         >
           <span className="block font-mono text-[10px] tracking-[0.4em] text-sky-400/15">
             SELECTED ARCHIVES // 厳選作品
@@ -1727,7 +1727,7 @@ function JapaneseEditorialBackground(): React.ReactElement {
 
         <div
           style={{ transform: `translateX(${driftSlow.toFixed(1)}px)` }}
-          className="absolute top-[2880px] left-[6%]"
+          className="absolute top-720 left-[6%]"
         >
           <span className="block font-mono text-[10px] tracking-[0.4em] text-sky-400/15">
             HALL OF CREDENTIALS // 認定証書額装展
@@ -1737,7 +1737,7 @@ function JapaneseEditorialBackground(): React.ReactElement {
           </span>
         </div>
 
-        <div className="absolute top-[3680px] right-[10%] font-serif text-[110px] sm:text-[190px] font-black text-sky-400/[0.026] leading-none">
+        <div className="absolute top-920 right-[10%] font-serif text-[110px] sm:text-[190px] font-black text-sky-400/[0.026] leading-none">
           共創未来
         </div>
       </div>
@@ -1778,7 +1778,7 @@ function SectionHeading({
       <div
         aria-hidden="true"
         style={{ left: `${shimmerPos}%` }}
-        className="pointer-events-none absolute -bottom-[1px] h-[2px] w-24 -translate-x-1/2 bg-gradient-to-r from-transparent via-sky-400 to-transparent transition-opacity duration-300"
+        className="pointer-events-none absolute -bottom-px h-0.5 w-24 -translate-x-1/2 bg-linear-to-r from-transparent via-sky-400 to-transparent transition-opacity duration-300"
       />
 
       <div>
@@ -1792,7 +1792,7 @@ function SectionHeading({
             {jpChapter}
           </span>
           {isLocked && (
-            <span className="hidden sm:inline-flex items-center gap-1.5 border border-white/10 bg-white/[0.03] px-2 py-0.5 text-[9px] tracking-[0.18em] text-slate-400">
+            <span className="hidden sm:inline-flex items-center gap-1.5 border border-white/10 bg-white/3 px-2 py-0.5 text-[9px] tracking-[0.18em] text-slate-400">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
               ALIGNED
             </span>
@@ -1952,13 +1952,17 @@ function HeroSection({ cv }: HeroSectionProps): React.ReactElement {
               <Icon name="github" size={17} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://instagram.com/aetyyy16"
               target="_blank"
               rel="noreferrer"
-              aria-label="LinkedIn"
+              aria-label="Instagram"
               className="flex h-10 w-10 items-center justify-center border border-white/15 bg-[#0c1117] font-serif text-sm font-bold text-slate-300 hover:border-sky-400 hover:text-sky-300 transition-colors"
             >
-              in
+              <span className="[&>svg]:h-4 [&>svg]:w-4 [&>svg]:fill-[#cad5e2]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg>
+              </span>
             </a>
             <a
               href="mailto:muhammad.irwan399@gmail.com"
@@ -1984,12 +1988,12 @@ function HeroSection({ cv }: HeroSectionProps): React.ReactElement {
             lang="ja"
             aria-hidden="true"
             style={rightParallax.innerParallaxStyle}
-            className="pointer-events-none absolute -top-8 right-0 select-none font-serif text-7xl font-black text-white/[0.05] sm:text-8xl"
+            className="pointer-events-none absolute -top-8 right-0 select-none font-serif text-7xl font-black text-white/5 sm:text-8xl"
           >
             創造
           </span>
 
-          <div className="mb-2.5 flex w-full max-w-[350px] items-center justify-between font-mono text-[10px] tracking-[0.2em] text-slate-400">
+          <div className="mb-2.5 flex w-full max-w-87.5 items-center justify-between font-mono text-[10px] tracking-[0.2em] text-slate-400">
             <span>
               <strong lang="ja" className="text-[#f4f1ea]">
                 創造
@@ -2012,7 +2016,7 @@ function HeroSection({ cv }: HeroSectionProps): React.ReactElement {
                 ? "transform 60ms linear"
                 : "transform 500ms cubic-bezier(0.22, 1, 0.36, 1)",
             }}
-            className="group relative w-full max-w-[350px] cursor-grab active:cursor-grabbing border border-white/20 bg-[#0d131a] p-3.5 shadow-[0_30px_80px_rgba(0,0,0,0.85)] select-none"
+            className="group relative w-full max-w-87.5 cursor-grab active:cursor-grabbing border border-white/20 bg-[#0d131a] p-3.5 shadow-[0_30px_80px_rgba(0,0,0,0.85)] select-none"
           >
             {/* Siku Presisi 3D */}
             <span
@@ -2043,7 +2047,7 @@ function HeroSection({ cv }: HeroSectionProps): React.ReactElement {
             {/* Gambar Potret Utama — Bersih tanpa bar INTERACTIVE PORTRAIT -0° / -0° */}
             <div
               style={{ transform: "translateZ(14px)" }}
-              className="relative aspect-[4/5] w-full overflow-hidden bg-slate-950"
+              className="relative aspect-4/5 w-full overflow-hidden bg-slate-950"
             >
               <img
                 src="https://lnjmllypcuwkqakowmdo.supabase.co/storage/v1/object/public/images/gallery/gallery-2-1792334102161-a4add0f8-a43b-4fbc-aae6-5689b8756e71.webp"
@@ -2066,7 +2070,7 @@ function HeroSection({ cv }: HeroSectionProps): React.ReactElement {
                 className="pointer-events-none absolute inset-0 transition-opacity duration-300"
               />
 
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#080c10]/60 via-transparent to-transparent" />
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-[#080c10]/60 via-transparent to-transparent" />
             </div>
 
             <div
@@ -2089,7 +2093,7 @@ function HeroSection({ cv }: HeroSectionProps): React.ReactElement {
             </div>
           </div>
 
-          <div className="mt-2.5 flex w-full max-w-[350px] items-center justify-center font-mono text-[10px] tracking-[0.18em] text-slate-500">
+          <div className="mt-2.5 flex w-full max-w-87.5 items-center justify-center font-mono text-[10px] tracking-[0.18em] text-slate-500">
             <span>DESIGN WITH INTENT. BUILD WITH PURPOSE.</span>
           </div>
         </div>
@@ -2133,13 +2137,13 @@ function StatItem({
       <div
         aria-hidden="true"
         style={{ left: `${shimmerPos}%` }}
-        className="pointer-events-none absolute top-0 h-[1.5px] w-20 -translate-x-1/2 bg-gradient-to-r from-transparent via-sky-400/80 to-transparent"
+        className="pointer-events-none absolute top-0 h-[1.5px] w-20 -translate-x-1/2 bg-linear-to-rrom-transparent via-sky-400/80 to-transparent"
       />
       <span
         lang="ja"
         aria-hidden="true"
         style={innerParallaxStyle}
-        className="pointer-events-none absolute right-2 bottom-1 select-none font-serif text-4xl font-black text-white/[0.045]"
+        className="pointer-events-none absolute right-2 bottom-1 select-none font-serif text-4xl font-black text-white/4.5"
       >
         {jpText}
       </span>
@@ -2180,7 +2184,7 @@ function SkillCard({ skill, index }: SkillCardProps): React.ReactElement {
       <div
         aria-hidden="true"
         style={{ left: `${shimmerPos}%` }}
-        className="pointer-events-none absolute top-0 h-[1.5px] w-16 -translate-x-1/2 bg-gradient-to-r from-transparent via-sky-400/70 to-transparent"
+        className="pointer-events-none absolute top-0 h-[1.5px] w-16 -translate-x-1/2 bg-linear-to-r from-transparent via-sky-400/70 to-transparent"
       />
       <div className="flex items-center gap-3.5 min-w-0">
         <span
@@ -2283,7 +2287,7 @@ function ProjectArt({ kind, innerStyle }: ProjectArtProps): React.ReactElement {
                 </p>
               </div>
               <div className="flex h-20 w-16 shrink-0 items-center justify-center border border-amber-200/20 bg-stone-900">
-                <div className="h-12 w-8 rounded-t-full bg-gradient-to-tr from-amber-600/70 to-stone-200" />
+                <div className="h-12 w-8 rounded-t-full bg-linear-to-tr from-amber-600/70 to-stone-200" />
               </div>
             </div>
             <div className="border-t border-white/10 pt-1.5 font-mono text-[8px] tracking-[0.2em] text-stone-400">
@@ -2359,7 +2363,7 @@ function ProjectCard({ project, index }: ProjectCardProps): React.ReactElement {
       <div
         aria-hidden="true"
         style={{ left: `${shimmerPos}%` }}
-        className="pointer-events-none absolute top-0 z-20 h-[2px] w-24 -translate-x-1/2 bg-gradient-to-r from-transparent via-sky-400 to-transparent"
+        className="pointer-events-none absolute top-0 z-20 h-0.5 w-24 -translate-x-1/2 bg-linear-to-r from-transparent via-sky-400 to-transparent"
       />
 
       <ProjectArt kind={project.art} innerStyle={innerParallaxStyle} />
@@ -2387,7 +2391,7 @@ function ProjectCard({ project, index }: ProjectCardProps): React.ReactElement {
             {project.tags.map((t: string) => (
               <span
                 key={t}
-                className="border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-[10px] text-slate-300"
+                className="border border-white/10 bg-white/3 px-2.5 py-1 font-mono text-[10px] text-slate-300"
               >
                 {t}
               </span>
@@ -2505,11 +2509,11 @@ function FramedCertificateCard({
 
           <div
             style={innerParallaxStyle}
-            className="relative flex aspect-[4/3] w-full flex-col justify-between border border-slate-300 bg-[#fbfaf6] p-3 sm:p-4 text-left"
+            className="relative flex aspect-4/3 w-full flex-col justify-between border border-slate-300 bg-[#fbfaf6] p-3 sm:p-4 text-left"
           >
             <span
               lang="ja"
-              className="pointer-events-none absolute right-2 bottom-5 select-none font-serif text-4xl font-black text-slate-900/[0.04]"
+              className="pointer-events-none absolute right-2 bottom-5 select-none font-serif text-4xl font-black text-slate-900/4"
             >
               {cert.jpStamp}
             </span>
@@ -2617,7 +2621,7 @@ function ContactSection(): React.ReactElement {
         lang="ja"
         aria-hidden="true"
         style={innerParallaxStyle}
-        className="pointer-events-none absolute top-4 left-1/2 -translate-x-1/2 select-none font-serif text-7xl font-black text-white/[0.04] sm:text-9xl"
+        className="pointer-events-none absolute top-4 left-1/2 -translate-x-1/2 select-none font-serif text-7xl font-black text-white/4 sm:text-9xl"
       >
         共創
       </span>
@@ -2660,7 +2664,9 @@ function ContactSection(): React.ReactElement {
 
         <div className="inline-flex items-center gap-2 font-mono text-[11px] text-emerald-400">
           <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
-          <span>Currently open to new opportunities · Cirebon, Indonesia</span>
+          <span>
+            Currently open to new opportunities · Cirebon, West Java, Indonesia
+          </span>
         </div>
       </div>
     </section>
@@ -2685,7 +2691,7 @@ function ToolboxStrip(): React.ReactElement {
       <div
         aria-hidden="true"
         style={{ left: `${shimmerPos}%` }}
-        className="pointer-events-none absolute top-0 h-[1.5px] w-24 -translate-x-1/2 bg-gradient-to-r from-transparent via-sky-400/70 to-transparent"
+        className="pointer-events-none absolute top-0 h-[1.5px] w-24 -translate-x-1/2 bg-linear-to-r from-transparent via-sky-400/70 to-transparent"
       />
       <span className="font-mono text-[11px] font-bold tracking-[0.2em] text-sky-400">
         ALSO IN MY TOOLBOX // 補助技術
@@ -2701,7 +2707,7 @@ function ToolboxStrip(): React.ReactElement {
         <span className="text-sky-400">·</span>
         <span>Vercel</span>
         <span className="text-sky-400">·</span>
-        <span>MongoDB</span>
+        <span>Supabase</span>
       </p>
     </div>
   );
@@ -2870,7 +2876,7 @@ export default function App(): React.ReactElement {
         <div
           aria-hidden="true"
           style={{ transform: `scaleX(${scrollProgress})` }}
-          className="fixed top-0 left-0 right-0 z-50 h-[2px] origin-left bg-sky-400"
+          className="fixed top-0 left-0 right-0 z-50 h-0.5 origin-left bg-sky-400"
         />
 
         {/* 3. JAPANESE EDITORIAL BACKGROUND TYPOGRAPHY */}
@@ -3130,13 +3136,17 @@ export default function App(): React.ReactElement {
                 <Icon name="github" size={15} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://instagram.com"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="LinkedIn"
+                aria-label="Instagram"
                 className="flex h-9 w-9 items-center justify-center border border-white/15 font-serif text-xs font-bold text-slate-300 hover:border-sky-400 hover:text-sky-300 transition-colors"
               >
-                in
+                <span className="[&>svg]:h-4 [&>svg]:w-4 [&>svg]:fill-[#cad5e2]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                  </svg>
+                </span>
               </a>
               <a
                 href="mailto:muhammad.irwan399@gmail.com"
@@ -3166,7 +3176,7 @@ export default function App(): React.ReactElement {
               onClick={(e: ReactMouseEvent<HTMLDivElement>) =>
                 e.stopPropagation()
               }
-              className="relative w-full max-w-2xl border-[10px] border-[#1c2530] bg-[#0b0f14] p-4 sm:p-6 shadow-2xl"
+              className="relative w-full max-w-2xl border-10 border-[#1c2530] bg-[#0b0f14] p-4 sm:p-6 shadow-2xl"
             >
               <button
                 type="button"

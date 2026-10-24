@@ -17,6 +17,9 @@
 *.ai                 filter=lfs diff=lfs merge=lfs -text
 *.sketch             filter=lfs diff=lfs merge=lfs -text
 
+# Exclude public web assets from LFS so static hosts (Vercel) can serve them directly
+public/** -filter -diff -merge text=auto
+
 # ---------------------------------------------------------------------------
 # Video
 # ---------------------------------------------------------------------------

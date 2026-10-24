@@ -3136,7 +3136,7 @@ export default function App(): React.ReactElement {
                 <Icon name="github" size={15} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/aetyyy16"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"

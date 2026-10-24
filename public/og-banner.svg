@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06080b">
+        <animate attributeName="stop-color" values="#06080b;#0b1116;#06080b" dur="10s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#0d151c">
+        <animate attributeName="stop-color" values="#0d151c;#090d11;#0d151c" dur="10s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#06080b" />
+    </linearGradient>
+
+    <!-- Cyan Glow Gradient for Scanline -->
+    <linearGradient id="scanlineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Ambient Radial Glow -->
+    <radialGradient id="ambientGlow" cx="80%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12">
+        <animate attributeName="stop-opacity" values="0.06;0.16;0.06" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Animated Moving Architectural Grid -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.08" />
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" fill-opacity="0.18" />
+      <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="40 40" dur="12s" repeatCount="indefinite" />
+    </pattern>
+
+    <!-- Clip Path to keep animations strictly inside the outer frame -->
+    <clipPath id="frameClip">
+      <rect x="20" y="20" width="1160" height="240" />
+    </clipPath>
+
+    <style>
+      .kanji-main {
+        font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", Georgia, serif;
+        font-weight: 900;
+        fill: #f4f1ea;
+        user-select: none;
+      }
+      .title-text {
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: bold;
+        fill: #f4f1ea;
+        letter-spacing: 2px;
+      }
+      .mono-meta {
+        font-family: "JetBrains Mono", Consolas, monospace;
+        letter-spacing: 4px;
+      }
+      .mono-sub {
+        font-family: "JetBrains Mono", Consolas, monospace;
+        letter-spacing: 3px;
+      }
+      .cursor-blink {
+        animation: blink 1.1s step-end infinite;
+      }
+      .border-runner {
+        stroke-dasharray: 180 2620;
+        animation: borderRun 14s linear infinite;
+      }
+      .corner-pulse {
+        animation: cornerGlow 4s ease-in-out infinite;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      @keyframes borderRun {
+        0% { stroke-dashoffset: 2800; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes cornerGlow {
+        0%, 100% { stroke-opacity: 1; filter: drop-shadow(0 0 2px #38bdf8); }
+        50% { stroke-opacity: 0.4; filter: none; }
+      }
+    </style>
+  </defs>
+
+  <!-- 1. Base Background & Moving Grid -->
+  <rect width="1200" height="280" fill="url(#bg)" />
+  <rect width="1200" height="280" fill="url(#grid)" />
+  <rect width="1200" height="280" fill="url(#ambientGlow)" />
+
+  <!-- 2. Clipped Interior Parallax Layer -->
+  <g clip-path="url(#frameClip)">
+
+    <!-- Parallax Layer A: Far Background Kanji Ribbon (Slow Drift Right) -->
+    <text x="650" y="95" class="kanji-main" font-size="95" fill-opacity="0.025" letter-spacing="25">
+      技術 ・ 美学 ・ 構造 ・ 革新
+      <animate attributeName="x" values="620;700;620" dur="22s" repeatCount="indefinite" />
+      <animate attributeName="fill-opacity" values="0.02;0.045;0.02" dur="8s" repeatCount="indefinite" />
+    </text>
+
+    <!-- Parallax Layer B: Giant Hero Kanji "創造" (Floating X & Y + Breathing Opacity) -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0; -28,-10; 0,0; 18,8; 0,0" dur="16s" repeatCount="indefinite" />
+      <text x="955" y="220" class="kanji-main" font-size="205" fill-opacity="0.055" text-anchor="middle">
+        創造
+        <animate attributeName="fill-opacity" values="0.035;0.08;0.035" dur="7s" repeatCount="indefinite" />
+      </text>
+      <!-- Subtle Cyan Outline Echo of the Kanji -->
+      <text x="960" y="224" class="kanji-main" font-size="205" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.08" text-anchor="middle">
+        創造
+        <animate attributeName="x" values="962;950;962" dur="9s" repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity" values="0.04;0.14;0.04" dur="7s" repeatCount="indefinite" />
+      </text>
+    </g>
+
+    <!-- Parallax Layer C: Vertical Tategaki Stream on Right Edge -->
+    <g opacity="0.28">
+      <text x="1152" y="80" font-family="serif" font-size="11" fill="#94a3b8" letter-spacing="6">
+        一行一行に情熱を込める
+        <animate attributeName="y" values="55;95;55" dur="12s" repeatCount="indefinite" />
+      </text>
+    </g>
+
+    <!-- Architectural Decorative Crosshairs -->
+    <g stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.25">
+      <path d="M 760 40 L 760 52 M 754 46 L 766 46" />
+      <path d="M 760 228 L 760 240 M 754 234 L 766 234" />
+      <line x1="760" y1="60" x2="760" y2="220" stroke-dasharray="3 6" stroke-opacity="0.12">
+        <animate attributeName="stroke-dashoffset" from="0" to="36" dur="4s" repeatCount="indefinite" />
+      </line>
+    </g>
+
+    <!-- Floating Ambient Particles -->
+    <circle cx="820" cy="190" r="1.8" fill="#38bdf8" fill-opacity="0.4">
+      <animate attributeName="cy" values="210;70;210" dur="11s" repeatCount="indefinite" />
+      <animate attributeName="fill-opacity" values="0;0.6;0" dur="11s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1040" cy="120" r="1.4" fill="#f4f1ea" fill-opacity="0.3">
+      <animate attributeName="cy" values="230;60;230" dur="15s" repeatCount="indefinite" />
+      <animate attributeName="fill-opacity" values="0;0.5;0" dur="15s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="900" cy="240" r="2" fill="#38bdf8" fill-opacity="0.3">
+      <animate attributeName="cy" values="240;90;240" dur="13s" repeatCount="indefinite" />
+      <animate attributeName="fill-opacity" values="0;0.45;0" dur="13s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Laser Scanline Sweep -->
+    <rect x="20" y="-20" width="1160" height="2" fill="url(#scanlineGrad)">
+      <animate attributeName="y" values="20;260;20" dur="9s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- 3. Outer Frame Border & Animated Shimmer Runner -->
+  <rect x="20" y="20" width="1160" height="240" fill="none" stroke="#f4f1ea" stroke-opacity="0.14" stroke-width="1" />
+  <rect x="20" y="20" width="1160" height="240" fill="none" stroke="#38bdf8" stroke-opacity="0.75" stroke-width="1.5" class="border-runner" />
+
+  <!-- 4. Cyan Corner Accents (Animated Breathing Glow) -->
+  <path d="M 20 48 L 20 20 L 48 20" fill="none" stroke="#38bdf8" stroke-width="2.2" class="corner-pulse" />
+  <path d="M 1152 20 L 1180 20 L 1180 48" fill="none" stroke="#38bdf8" stroke-width="2.2" class="corner-pulse" />
+  <path d="M 20 232 L 20 260 L 48 260" fill="none" stroke="#38bdf8" stroke-width="2.2" class="corner-pulse" />
+  <path d="M 1152 260 L 1180 260 L 1180 232" fill="none" stroke="#38bdf8" stroke-width="2.2" class="corner-pulse" />
+
+  <!-- 5. Top Editorial Metadata & Live Status Dot -->
+  <g transform="translate(60, 62)">
+    <!-- Pulsing Green Status Dot -->
+    <circle cx="5" cy="-4" r="4" fill="#10b981" fill-opacity="0.3">
+      <animate attributeName="r" values="3;8;3" dur="2.2s" repeatCount="indefinite" />
+      <animate attributeName="fill-opacity" values="0.6;0;0.6" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="5" cy="-4" r="3" fill="#10b981" />
+
+    <text x="18" y="0" class="mono-meta" font-size="11" fill="#38bdf8">
+      01 // THE ARCHITECT — CIREBON, WEST JAVA (GMT+7)
+    </text>
+  </g>
+
+  <!-- 6. Main Editorial Title -->
+  <text x="60" y="144" class="title-text" font-size="64">
+    Muhammad Irwan<tspan fill="#38bdf8">.</tspan>
+  </text>
+
+  <!-- 7. Japanese Subtitle & Brand with Blinking Terminal Cursor -->
+  <text x="60" y="185" class="mono-sub" font-size="14.5" fill="#94a3b8">
+    ムハンマド・イルワン <tspan fill="#38bdf8">/</tspan> AETHYY.DEV — FULL-STACK DEVELOPER<tspan fill="#38bdf8" class="cursor-blink">_</tspan>
+  </text>
+
+  <!-- 8. Animated Horizontal Divider Accent -->
+  <line x1="60" y1="204" x2="240" y2="204" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.45">
+    <animate attributeName="x2" values="140;320;140" dur="8s" repeatCount="indefinite" />
+  </line>
+
+  <!-- 9. Bottom Editorial Quote -->
+  <text x="60" y="232" class="mono-sub" font-size="11" fill="#64748b">
+    DESIGN WITH INTENT. BUILD WITH PURPOSE. <tspan fill="#94a3b8">[一行一行に、情熱を]</tspan>
+  </text>
+
+  <!-- 10. Hanko Red Seal Stamp (With Subtle Pulse Ring) -->
+  <g transform="translate(1086, 48)">
+    <rect x="-4" y="-4" width="54" height="54" fill="none" stroke="#e11d48" stroke-width="0.8" stroke-opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.1;0.5;0.1" dur="3.5s" repeatCount="indefinite" />
+    </rect>
+    <rect width="46" height="46" fill="#e11d48" fill-opacity="0.14" stroke="#e11d48" stroke-width="1.5" />
+    <text x="23" y="31" font-family="serif" font-size="22" font-weight="bold" fill="#e11d48" text-anchor="middle">印</text>
+  </g>
+</svg>

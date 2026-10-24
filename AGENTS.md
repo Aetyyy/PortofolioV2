@@ -4,6 +4,6 @@ React + Vite + Tailwind CSS portfolio project.
 
 ## Scripts
 
-- `npm run dev` - Jalankan development server
-- `npm run build` - Build production bundle
-- `npm run preview` - Preview production build
+- `bun run dev` - Jalankan development server
+- `bun run build` - Build production bundle
+- `bun run preview` - Preview production build
